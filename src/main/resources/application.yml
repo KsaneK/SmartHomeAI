@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/smarthome?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: smarthome
+    password: zaq1@WSX
+    #initialization-mode: always # Force load data.sql
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: smarthome1237@gmail.com
+    password: zaq1@WSX
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls.enable: true
+
+smarthome:
+  security:
+    enable: true
+  frontend:
+    url: http://localhost:4200
+  status:
+    url: http://localhost:1883
